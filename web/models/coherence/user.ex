@@ -5,6 +5,7 @@ defmodule PhoenixRoles.User do
   schema "users" do
     field :name, :string
     field :email, :string
+    has_many :organizations, PhoenixRoles.Organization
     coherence_schema
 
     timestamps

@@ -3,6 +3,7 @@ defmodule PhoenixRoles.Organization do
 
   schema "organizations" do
     field :name, :string
+    belongs_to :user, PhoenixRoles.User
 
     timestamps()
   end
@@ -12,7 +13,7 @@ defmodule PhoenixRoles.Organization do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:name])
+    |> cast(params, [:name, :user_id])
     |> validate_required([:name])
   end
 end

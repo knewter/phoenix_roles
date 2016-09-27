@@ -4,7 +4,9 @@ defmodule PhoenixRoles.OrganizationController do
   alias PhoenixRoles.Organization
 
   def index(conn, _params) do
-    organizations = Repo.all(Organization)
+    query = from o in Organization,
+              where: o.user_id == ^conn.assigns.current_user.id
+    organizations = Repo.all(query)
     render(conn, "index.html", organizations: organizations)
   end
 
@@ -14,6 +16,7 @@ defmodule PhoenixRoles.OrganizationController do
   end
 
   def create(conn, %{"organization" => organization_params}) do
+    organization_params = Map.put(organization_params, "user_id", conn.assigns.current_user.id)
     changeset = Organization.changeset(%Organization{}, organization_params)
 
     case Repo.insert(changeset) do

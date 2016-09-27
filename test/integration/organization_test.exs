@@ -36,7 +36,7 @@ defmodule PhoenixRoles.Integration.OrganizationsTest do
     |> log_in_as(bob)
     |> assert_response( status: 200 )
     |> follow_link( "Organizations" )
-    |> refute_response( status: 200, html: "Alice Org" )
+    |> refute_response( html: "Alice Org" )
   end
 
   def log_out(conn) do
