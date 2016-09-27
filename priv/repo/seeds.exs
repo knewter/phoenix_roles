@@ -9,3 +9,8 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+PhoenixRoles.Repo.delete_all PhoenixRoles.User
+
+%PhoenixRoles.User{}
+  |> PhoenixRoles.User.changeset(%{name: "Josh Adams", email: "josh@dailydrip.com", password: "secret", password_confirmation: "secret"})
+  |> PhoenixRoles.Repo.insert!
