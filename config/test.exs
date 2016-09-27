@@ -12,8 +12,6 @@ config :logger, level: :warn
 # Configure your database
 config :phoenix_roles, PhoenixRoles.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
   database: "phoenix_roles_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

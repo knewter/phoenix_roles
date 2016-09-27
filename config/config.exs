@@ -40,3 +40,6 @@ config :coherence, PhoenixRoles.Coherence.Mailer,
   api_key: System.get_env("MAILGUN_API_KEY"),
   domain: System.get_env("MAILGUN_DOMAIN")
 # %% End Coherence Configuration %%
+
+config :phoenix_integration,
+  endpoint: PhoenixRoles.Endpoint
