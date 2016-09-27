@@ -32,10 +32,11 @@ config :coherence,
   repo: PhoenixRoles.Repo,
   module: PhoenixRoles,
   logged_out_url: "/",
-  email_from: {"Your Name", "yourname@example.com"},
+  email_from: {"Josh Adams", "josh@dailydrip.com"},
   opts: [:rememberable, :authenticatable, :recoverable, :lockable, :trackable, :unlockable_with_token, :invitable, :registerable]
 
 config :coherence, PhoenixRoles.Coherence.Mailer,
-  adapter: Swoosh.Adapters.Sendgrid,
-  api_key: "your api key here"
+  adapter: Swoosh.Adapters.Mailgun,
+  api_key: System.get_env("MAILGUN_API_KEY"),
+  domain: System.get_env("MAILGUN_DOMAIN")
 # %% End Coherence Configuration %%
