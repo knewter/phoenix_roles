@@ -40,7 +40,8 @@ defmodule PhoenixRoles.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:coherence, "~> 0.3"},
-      {:phoenix_integration, "~> 0.1"}
+      {:phoenix_integration, "~> 0.1"},
+      {:policy_wonk, "~> 0.1"}
     ]
   end
 

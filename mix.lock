@@ -29,6 +29,7 @@
   "phoenix_timex": {:hex, :phoenix_timex, "1.0.1", "879617f2acd3876c5c43599fcd9a57821f42b30b88e34089f38ac5d7cb02841e", [:mix], [{:phoenix_html, "~> 2.5", [hex: :phoenix_html, optional: false]}, {:timex, "~> 2.1", [hex: :timex, optional: false]}]},
   "plug": {:hex, :plug, "1.2.0", "496bef96634a49d7803ab2671482f0c5ce9ce0b7b9bc25bc0ae8e09859dd2004", [:mix], [{:cowboy, "~> 1.0", [hex: :cowboy, optional: true]}, {:mime, "~> 1.0", [hex: :mime, optional: false]}]},
   "poison": {:hex, :poison, "2.2.0", "4763b69a8a77bd77d26f477d196428b741261a761257ff1cf92753a0d4d24a63", [:mix], []},
+  "policy_wonk": {:hex, :policy_wonk, "0.1.1", "a33ef450ebe3794433a97a3dc490e66999b41d72b348f259f0dfbe85845a1f42", [:mix], [{:plug, "~> 1.1", [hex: :plug, optional: false]}]},
   "poolboy": {:hex, :poolboy, "1.5.1", "6b46163901cfd0a1b43d692657ed9d7e599853b3b21b95ae5ae0a777cf9b6ca8", [:rebar], []},
   "postgrex": {:hex, :postgrex, "0.12.0", "bdeeb4c42768c47c3c92228e66c70357fe9a9384fbc9de06abba774b22dd0635", [:mix], [{:connection, "~> 1.0", [hex: :connection, optional: false]}, {:db_connection, "~> 1.0-rc.4", [hex: :db_connection, optional: false]}, {:decimal, "~> 1.0", [hex: :decimal, optional: false]}]},
   "ranch": {:hex, :ranch, "1.2.1", "a6fb992c10f2187b46ffd17ce398ddf8a54f691b81768f9ef5f461ea7e28c762", [:make], []},
